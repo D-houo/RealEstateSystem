@@ -19,7 +19,7 @@ public class Server {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("aaaa");
+        System.out.println("aaa");
         System.out.println("The project started, let the game begin!");
         System.out.println("KIKOO IS HEREE ");
         System.out.println("Nazzz is here");
