@@ -1,0 +1,2 @@
+# RealEstateSystem
+required to develop a system to manage the process of renting, buying and sharing apartments. The system should enable owners, people who have apartments for rent, to post the available apartment description, renting period, and price. The system should enable renters to rent an apartment to view, select, and rent posted apartments. The system also allow people to post spaces to share with other people. The system should manage the payment process between the two parties. Both renter and owner should be able to create and manage their profiles. 
