@@ -5,6 +5,10 @@
  */
 package server;
 
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+
 /**
  *
  * @author Youssef hamdi
@@ -20,6 +24,12 @@ public class Server {
         System.out.println("KIKOO IS HEREE ");
         System.out.println("Nazzz is here");
         System.out.println("GHUNGHUN");
+        
+        MongoClient mongoclient = new MongoClient();
+        MongoDatabase db = mongoclient.getDatabase("RealState");
+        MongoCollection creatDoc =  db.getCollection("Inquriey");
+        
+        
     }
     
 }
