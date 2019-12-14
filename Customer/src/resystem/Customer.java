@@ -5,17 +5,25 @@
  */
 package resystem;
 
+import java.util.ArrayList;
 /**
  *
- * @author Youssef hamdi
+ * @author Abd El Rahman
  */
-public class Customer {
+public class Customer extends Person{
+    
+    ArrayList<Apartement> AquiredApartements;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public Customer() {
     }
+    
+
+    public ArrayList<Apartement> getAquiredApartements() {
+        return AquiredApartements;
+    }
+
+    public void setAquiredApartements(ArrayList<Apartement> AquiredApartements) {
+        this.AquiredApartements = AquiredApartements;
+    }  
     
 }
