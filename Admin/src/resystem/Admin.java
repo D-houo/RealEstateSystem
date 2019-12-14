@@ -5,17 +5,45 @@
  */
 package resystem;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author Youssef hamdi
+ * @author Mohamed Nazeem
  */
-public class Admin {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+
+
+public class Admin extends Person{
+
+    public static Admin adminOcj;
+    ArrayList<Inquriey> inquireyArray;
+    ArrayList<Apartement> salesArray;
+
+    public Admin() {
+    }
+
+    
+    public void setInquireyArray(ArrayList<Inquriey> inquireyArray) {
+        this.inquireyArray = inquireyArray;
+    }
+
+    public void setSalesArray(ArrayList<Apartement> salesArray) {
+        this.salesArray = salesArray;
+    }
+    
+    public static Admin getAdminInstance(){
+        if(adminOcj == null)
+        {
+        adminOcj = new Admin();
+        return adminOcj;
+        }
+        return adminOcj;
+    }
+    
+    public ArrayList<Apartement> generateReport(){
+        return null;
+        
     }
     
 }
