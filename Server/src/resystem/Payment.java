@@ -13,6 +13,7 @@ import java.rmi.RemoteException;
 public interface Payment extends Remote{
     
     
+    
     public void pay() throws RemoteException;
     
 }

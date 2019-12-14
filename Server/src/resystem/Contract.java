@@ -45,4 +45,9 @@ class Contract extends UnicastRemoteObject{
         return ID;
     }
     
+    public void checkout()
+    {
+    
+    }
+    
 }
