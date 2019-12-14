@@ -20,7 +20,7 @@ public class Inquriey extends UnicastRemoteObject implements InqurieyROI{
     public Inquriey() throws RemoteException{
     }
 
-    public Inquriey(String complaint, int ID) {
+    public Inquriey(String complaint, int ID) throws RemoteException {
         this.complaint = complaint;
         this.ID = ID;
     }
@@ -47,8 +47,5 @@ public class Inquriey extends UnicastRemoteObject implements InqurieyROI{
     public String getComplaint()  throws RemoteException{
  
         return null;
-    }
-    
-    
-    
+    }   
 }
