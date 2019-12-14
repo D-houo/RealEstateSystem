@@ -5,17 +5,32 @@
  */
 package resystem;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author Youssef hamdi
+ * @author Abd El Rahman
  */
-public class Owner {
+public class Owner extends Person{
+    
+    private ArrayList<Apartement> apartementsArray;
+    private ArrayList<Contract> contractsArray;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public Owner() {
     }
+
+    public void setApartementsArray(ArrayList<Apartement> apartementsArray) {
+        this.apartementsArray = apartementsArray;
+    }
+
+    public void setContractsArray(ArrayList<Contract> contractsArray) {
+        this.contractsArray = contractsArray;
+    }
+    
+    public ArrayList<Apartement> viewPersonalPosts()
+    {
+    return null;
+    }
+    
     
 }
