@@ -4,40 +4,41 @@
  * and open the template in the editor.
  */
 package resystem;
-
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 /**
  *
  * @author Mostafa-PC
  */
-class Contract {
+class Contract extends UnicastRemoteObject{
     
     private int ID;
     
     
-    public Contract() {
+    public Contract() throws RemoteException{
     }
     
-    public void viewContract()
+    public void viewContract() throws RemoteException
     {
         
     }
     
-    public void RespondContract(Contract obj)
+    public void RespondContract(Contract obj) throws RemoteException
     {
     
     }
     
-    public void setPaymentMethod(Payment Obj)
+    public void setPaymentMethod(Payment Obj) throws RemoteException
     {
         
     }
     
-    public void setID(int ID)
+    public void setID(int ID) throws RemoteException
     {
         this.ID = ID;
     }
     
-    public int getID()
+    public int getID() throws RemoteException
     {
         return ID;
     }

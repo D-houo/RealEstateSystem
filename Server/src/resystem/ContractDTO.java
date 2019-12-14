@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package resystem;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 
 import java.util.ArrayList;
 
@@ -11,9 +13,9 @@ import java.util.ArrayList;
  *
  * @author Mostafa-PC
  */
-public interface ContractDTO {
+public interface ContractDTO extends Remote{
     
-    public ArrayList<Contract> getAllContract();
-    public void setAllContract(ArrayList<Contract> contracts);
+    public ArrayList<Contract> getAllContract() throws RemoteException;
+    public void setAllContract(ArrayList<Contract> contracts) throws RemoteException;
     
 }

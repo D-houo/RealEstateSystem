@@ -4,14 +4,15 @@
  * and open the template in the editor.
  */
 package resystem;
-
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 /**
  *
  * @author Mostafa-PC
  */
-public interface Payment {
+public interface Payment extends Remote{
     
     
-    public void pay();
+    public void pay() throws RemoteException;
     
 }
