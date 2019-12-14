@@ -13,6 +13,7 @@ class Contract {
     
     private int ID;
     
+    
     public Contract() {
     }
     
