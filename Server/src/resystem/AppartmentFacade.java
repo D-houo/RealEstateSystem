@@ -5,12 +5,15 @@
  */
 package resystem;
 
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
 /**
  *
  * @author Youssef hamdi
  */
-public interface AppartmentFacade {
-    public void setAppartment(String discreption , String category, int price , String location , String area , int numberOfRooms);
+public interface AppartmentFacade extends Remote{
+    public void setAppartment(String discreption , String category, int price , String location , String area , int numberOfRooms) throws RemoteException;
     
-    public String getAppartment();
+    public String getAppartment() throws RemoteException;
 }
