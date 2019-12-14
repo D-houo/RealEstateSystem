@@ -5,11 +5,13 @@
  */
 package resystem;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Mostafa-PC
  */
-public class ContractMapper {
+public class ContractMapper implements Serializable{
 
     public ContractMapper() {
     }

@@ -5,11 +5,13 @@
  */
 package resystem;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Mostafa-PC
  */
-public class AppartementMapper {
+public class AppartementMapper implements Serializable {
 
     public AppartementMapper() {
     }

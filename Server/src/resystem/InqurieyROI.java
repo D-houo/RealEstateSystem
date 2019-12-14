@@ -5,14 +5,16 @@
  */
 package resystem;
 
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 /**
  *
  * @author Abd El Rahman
  */
-public interface InqurieyROI {
+public interface InqurieyROI extends Remote {
     
-    public void setComplaint(String c);
-    public String getComplaint();
+    public void setComplaint(String c) throws RemoteException;
+    public String getComplaint() throws RemoteException;
     
     
     

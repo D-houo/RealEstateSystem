@@ -5,15 +5,18 @@
  */
 package resystem;
 
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
 /**
  *
  * @author Mohamed Nazeem
  */
-public class Account implements AccountInterface{
+public class Account extends UnicastRemoteObject implements AccountInterface {
     String userName;
     String password;
 
-    public Account() {
+    public Account() throws RemoteException {
     }
 
     public String getUserName() {
@@ -32,11 +35,13 @@ public class Account implements AccountInterface{
         this.password = password;
     }
     
-    public void register(Person perobj){
+    @Override
+    public void register(Person perobj)throws RemoteException{
     
     }
     
-    public Person login(String username , String password){
+    @Override
+    public Person login(String username , String password)throws RemoteException{
      
         return null;
     }

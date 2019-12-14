@@ -11,7 +11,11 @@ import java.util.ArrayList;
  *
  * @author Mohamed Nazeem
  */
+
+
+
 public class Admin extends Person{
+
     public static Admin adminOcj;
     ArrayList<Inquriey> inquireyArray;
     ArrayList<Apartement> salesArray;

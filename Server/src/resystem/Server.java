@@ -30,6 +30,8 @@ public class Server {
         MongoCollection creatDoc =  db.getCollection("Inquriey");
         
         
+        System.out.println("ghunemi");
+        
     }
     
 }
