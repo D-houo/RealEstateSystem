@@ -13,7 +13,9 @@ import java.rmi.server.UnicastRemoteObject;
 class Contract extends UnicastRemoteObject{
     
     private int ID;
-    
+    private Payment paymentObj;
+    private Apartement apartmentObj;
+    private Customer customerObj;
     
     public Contract() throws RemoteException{
     }
