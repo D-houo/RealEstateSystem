@@ -17,19 +17,19 @@ public class AppartementMapper {
     public void insert(Apartement a)
     {
         
-        return a;
+       
     }
     
     public void update(Apartement a)
     {
         
-        return a;
+        
     }
     
     public void delete(Apartement a)
     {
         
-        return a;
+        
     }
     
     public void filter(int ID)
@@ -40,7 +40,7 @@ public class AppartementMapper {
     public Apartement getAppartement(int ID)
     {
         
-        return Apartement;
+        return null;
     }
     
 }

@@ -29,6 +29,11 @@ public class Check implements Payment{
     public void setBankID(String bankID) {
         this.bankID = bankID;
     }
+
+    @Override
+    public void pay() {
+        
+    }
     
     
     

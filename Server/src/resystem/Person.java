@@ -21,6 +21,17 @@ public class Person {
     public Person() {
     }
 
+    public Person(Account authObj, String fname, String lname, String Email, int age, String phone, int ID) {
+        this.authObj = authObj;
+        this.fname = fname;
+        this.lname = lname;
+        this.Email = Email;
+        this.age = age;
+        this.phone = phone;
+        this.ID = ID;
+    }
+
+    
     public Account getAuthObj() {
         return authObj;
     }
