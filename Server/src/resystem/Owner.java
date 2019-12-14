@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Abd El Rahman
  */
-public class Owner {
+public class Owner  {
     
     private ArrayList<Apartement> apartementsArray;
     private ArrayList<Contract> contractsArray;
