@@ -13,6 +13,7 @@ public class Visa implements Payment{
     
     private int visaNumber;
     private String expirationDate;
+     private float price;
 
     public int getVisaNumber() {
         return visaNumber;
@@ -29,6 +30,16 @@ public class Visa implements Payment{
     public void setExpirationDate(String expirationDate) {
         this.expirationDate = expirationDate;
     } 
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+    
+    
 
     @Override
     public void pay() {

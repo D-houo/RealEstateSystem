@@ -13,7 +13,7 @@ package resystem;
 public class Cash implements Payment{
     
     private float cashTendered;
-    
+     private float price;
     
     public float getCashTendered() {
         return cashTendered;
@@ -22,6 +22,16 @@ public class Cash implements Payment{
     public void setCashTendered(float cashTendered) {
         this.cashTendered = cashTendered;
     }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+    
+    
 
     @Override
     public void pay() {

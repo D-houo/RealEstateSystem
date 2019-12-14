@@ -13,6 +13,7 @@ public class Check implements Payment{
     
     private String name;
     private String bankID;
+    private float price;
 
     public String getName() {
         return name;
@@ -28,6 +29,14 @@ public class Check implements Payment{
 
     public void setBankID(String bankID) {
         this.bankID = bankID;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
     }
 
     @Override
