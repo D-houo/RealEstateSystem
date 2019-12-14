@@ -9,8 +9,6 @@ package resystem;
  *
  * @author Youssef hamdi
  */
-public interface AppartmentFacade {
-    public void setAppartment(String discreption , String category, int price , String location , String area , int numberOfRooms);
-    
-    public String getAppartment();
+public interface ApartmentROI {
+    public void acquireApartmnet(Apartement a);
 }
