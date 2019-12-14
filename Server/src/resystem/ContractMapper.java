@@ -32,11 +32,9 @@ public class ContractMapper implements Serializable{
         
     }
     
-    public Contract getContract(int id)
-    {
-        Contract Obj = new Contract();
+    public Contract getContract(int id){
         
-        return Obj;
+        return null;
     }
     
 }

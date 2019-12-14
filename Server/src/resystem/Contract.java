@@ -44,6 +44,31 @@ class Contract extends UnicastRemoteObject{
     {
         return ID;
     }
+
+    public Payment getPaymentObj() {
+        return paymentObj;
+    }
+
+    public void setPaymentObj(Payment paymentObj) {
+        this.paymentObj = paymentObj;
+    }
+
+    public Apartement getApartmentObj() {
+        return apartmentObj;
+    }
+
+    public void setApartmentObj(Apartement apartmentObj) {
+        this.apartmentObj = apartmentObj;
+    }
+
+    public Customer getCustomerObj() {
+        return customerObj;
+    }
+
+    public void setCustomerObj(Customer customerObj) {
+        this.customerObj = customerObj;
+    }
+
     
     public void checkout()
     {
