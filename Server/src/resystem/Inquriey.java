@@ -5,16 +5,19 @@
  */
 package resystem;
 
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
 /**
  *
  * @author Abd El Rahman
  */
-public class Inquriey implements InqurieyROI{
+public class Inquriey extends UnicastRemoteObject implements InqurieyROI{
     
     String complaint;
     int ID;
 
-    public Inquriey() {
+    public Inquriey() throws RemoteException{
     }
 
     public Inquriey(String complaint, int ID) {
@@ -36,13 +39,14 @@ public class Inquriey implements InqurieyROI{
     }
 
     @Override
-    public void setComplaint(String c) {
+    public void setComplaint(String c)  throws RemoteException{
       
     }
 
     @Override
-    public String getComplaint() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String getComplaint()  throws RemoteException{
+ 
+        return null;
     }
     
     

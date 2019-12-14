@@ -29,5 +29,10 @@ public class Visa implements Payment{
     public void setExpirationDate(String expirationDate) {
         this.expirationDate = expirationDate;
     } 
+
+    @Override
+    public void pay() {
+        
+    }
     
 }

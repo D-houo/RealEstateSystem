@@ -22,6 +22,11 @@ public class Cash implements Payment{
     public void setCashTendered(float cashTendered) {
         this.cashTendered = cashTendered;
     }
+
+    @Override
+    public void pay() {
+       
+    }
     
     
     

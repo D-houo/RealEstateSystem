@@ -11,14 +11,30 @@ import java.util.ArrayList;
  *
  * @author Mohamed Nazeem
  */
-public class Admin extends Person {
+
+
+
+public class Admin extends Person{
+
     public static Admin adminOcj;
     ArrayList<Inquriey> inquireyArray;
     ArrayList<Apartement> salesArray;
 
+    public Admin(ArrayList<Inquriey> inquireyArray, ArrayList<Apartement> salesArray) {
+        this.inquireyArray = inquireyArray;
+        this.salesArray = salesArray;
+    }
+
+    public Admin(ArrayList<Inquriey> inquireyArray, ArrayList<Apartement> salesArray, Account authObj, String fname, String lname, String Email, int age, String phone, int ID) {
+        super(authObj, fname, lname, Email, age, phone, ID);
+        this.inquireyArray = inquireyArray;
+        this.salesArray = salesArray;
+    }
+
     public Admin() {
     }
 
+    
     public void setInquireyArray(ArrayList<Inquriey> inquireyArray) {
         this.inquireyArray = inquireyArray;
     }

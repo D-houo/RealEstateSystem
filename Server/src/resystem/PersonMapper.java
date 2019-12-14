@@ -5,11 +5,13 @@
  */
 package resystem;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Mohamed Nazeem
  */
-public class PersonMapper {
+public class PersonMapper implements Serializable{
     public void insert(Person p){
 
 }
@@ -28,5 +30,6 @@ public class PersonMapper {
     
     public Person getPerson(String username,String password){
    
+        return null;
     }
 }

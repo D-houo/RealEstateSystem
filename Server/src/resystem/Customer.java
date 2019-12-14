@@ -14,6 +14,20 @@ public class Customer extends Person{
     
     ArrayList<Apartement> AquiredApartements;
 
+    public Customer() {
+    }
+
+    public Customer(ArrayList<Apartement> AquiredApartements) {
+        this.AquiredApartements = AquiredApartements;
+    }
+
+    public Customer(ArrayList<Apartement> AquiredApartements, Account authObj, String fname, String lname, String Email, int age, String phone, int ID) {
+        super(authObj, fname, lname, Email, age, phone, ID);
+        this.AquiredApartements = AquiredApartements;
+    }
+    
+    
+
     public ArrayList<Apartement> getAquiredApartements() {
         return AquiredApartements;
     }

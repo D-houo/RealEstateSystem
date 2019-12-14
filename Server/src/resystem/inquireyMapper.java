@@ -5,12 +5,14 @@
  */
 package resystem;
 
+import java.io.Serializable;
+
 
 /**
  *
  * @author Abd El Rahman
  */
-public class inquireyMapper {
+public class inquireyMapper implements Serializable{
     
     public void insert(Inquriey i)
     {
@@ -29,7 +31,7 @@ public class inquireyMapper {
     
     public Inquriey getInquriey()
     {
-   
+        return null;
     }
     
 }
