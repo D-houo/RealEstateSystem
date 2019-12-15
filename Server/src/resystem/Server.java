@@ -17,26 +17,18 @@ import java.rmi.registry.Registry;
  */
 public class Server {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-     
-        MongoClient mongoclient = new MongoClient();
-        MongoDatabase db = mongoclient.getDatabase("RealState");
-        MongoCollection creatDoc =  db.getCollection("Inquriey");
-        
-        
+  
        try 
        {
             // My remote object [Skeleton]
-          //  CalculatorInterface c = new Calculator();
+           AppartmentFacade af = new Apartement();
             
             // My RMI Registry
             Registry registry = LocateRegistry.createRegistry(1099);
             
             //Add my object to the RMI Registry
-           // registry.bind("calc", c);
+            registry.bind("APfacade", af);
             System.out.println("Server is ready...");   
         } 
        catch (Exception ex) 

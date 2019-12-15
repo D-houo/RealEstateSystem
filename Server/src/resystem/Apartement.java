@@ -5,11 +5,13 @@
  */
 package resystem;
 
+import java.rmi.RemoteException;
+
 /**
  *
  * @author Youssef hamdi
  */
-public class Apartement {
+public class Apartement implements AppartmentFacade {
     private int id;
     private String discreption;
     private String category;
@@ -107,6 +109,29 @@ public class Apartement {
 
     public void setOwnerObj(Person ownerObj) {
         this.ownerObj = ownerObj;
+    }
+
+    @Override
+    public void setAppartment(String discreption, String category, int price, String location, String area, int numberOfRooms) throws RemoteException {
+        
+        Apartement a = new Apartement();
+        AppartementMapper mapper = new AppartementMapper();
+        a.setDiscreption(discreption);
+        a.setArea(area);
+        a.setCategory(category);
+        a.setLocation(location);
+        a.setPrice(price);
+        a.setNumberOfRooms(numberOfRooms);
+        
+        mapper.insert(a);
+        mapper.close();
+        
+        
+    }
+
+    @Override
+    public String getAppartment() throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
