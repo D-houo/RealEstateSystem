@@ -7,6 +7,7 @@ package resystem;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.util.Scanner;
 
 /**
  *
@@ -19,6 +20,29 @@ public class Main {
         {
             // Connecting to the RMI Registry created on the server
             Registry registry = LocateRegistry.getRegistry(1099);
+            
+            AppartmentFacade af = (AppartmentFacade) registry.lookup("APfacade");
+            
+            System.out.println("Enter Apartment discreption: ");
+            Scanner input = new Scanner(System.in);
+            String d = input.nextLine();
+            
+            System.out.println("Enter Apartment Category: ");
+            String c = input.nextLine();
+            
+            System.out.println("Enter Apartment price: ");
+            int p = input.nextInt();
+            
+            System.out.println("Enter Apartment Location: ");
+            String l = input.nextLine();
+            
+            System.out.println("Enter Apartment Area: ");
+            String a = input.nextLine();
+            
+            System.out.println("Enter Apartment Number of rooms: ");
+            int ns = input.nextInt();
+            
+            af.setAppartment(d, c, p, l, a,ns);
 
             // Search for the stub "calc"
             //CalculatorInterface c = (CalculatorInterface) registry.lookup("calc");
@@ -31,7 +55,7 @@ public class Main {
         } 
         catch (Exception ex) 
         {
-            System.out.println("Exception occured");
+            System.out.println("Exception occured"+ex);
         }
     
     }

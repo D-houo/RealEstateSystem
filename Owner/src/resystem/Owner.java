@@ -5,13 +5,14 @@
  */
 package resystem;
 
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 
 /**
  *
  * @author Abd El Rahman
  */
-public class Owner extends Person{
+public class Owner extends Person implements AppartmentFacade{
     
     private ArrayList<Apartement> apartementsArray;
     private ArrayList<Contract> contractsArray;
@@ -30,6 +31,17 @@ public class Owner extends Person{
     public ArrayList<Apartement> viewPersonalPosts()
     {
     return null;
+    }
+
+    @Override
+    public void setAppartment(String discreption, String category, int price, String location, String area, int numberOfRooms) throws RemoteException {
+    
+
+    }
+
+    @Override
+    public String getAppartment() throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

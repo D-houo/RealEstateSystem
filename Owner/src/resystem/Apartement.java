@@ -5,6 +5,8 @@
  */
 package resystem;
 
+import java.rmi.RemoteException;
+
 /**
  *
  * @author Youssef hamdi
@@ -37,8 +39,9 @@ public class Apartement {
         
     }
     
-    public void addPost(Apartement apObj){
-        
+    public void addPost(Apartement apObj) throws RemoteException{
+        AppartmentFacade ap = null ; 
+        ap.setAppartment(apObj.getDiscreption(), apObj.getCategory(),apObj.getPrice(),apObj.getLocation(),apObj.getArea(),apObj.getNumberOfRooms());
     }
     
      public void editPost(Apartement apObj){
