@@ -13,6 +13,7 @@ import java.rmi.RemoteException;
  * @author Youssef hamdi
  */
 public interface AppartmentFacade extends Remote{
+    
     public void setAppartment(String discreption , String category, int price , String location , String area , int numberOfRooms) throws RemoteException;
     
     public String getAppartment() throws RemoteException;
