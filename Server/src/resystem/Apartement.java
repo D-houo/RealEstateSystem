@@ -5,13 +5,15 @@
  */
 package resystem;
 
+import java.io.Serializable;
 import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
 /**
  *
  * @author Youssef hamdi
  */
-public class Apartement implements AppartmentFacade {
+public class Apartement extends UnicastRemoteObject  implements AppartmentFacade, Serializable {
     private int id;
     private String discreption;
     private String category;
@@ -21,10 +23,10 @@ public class Apartement implements AppartmentFacade {
     private int numberOfRooms;
     private Person ownerObj;
 
-    public Apartement() {
+    public Apartement()throws RemoteException{
     }
 
-    public Apartement(int id, String discreption, String category, int price, String location, String area, int numberOfRooms, Person ownerObj) {
+    public Apartement(int id, String discreption, String category, int price, String location, String area, int numberOfRooms, Person ownerObj)throws RemoteException {
         this.id = id;
         this.discreption = discreption;
         this.category = category;
@@ -111,8 +113,16 @@ public class Apartement implements AppartmentFacade {
         this.ownerObj = ownerObj;
     }
 
+
+
+    @Override
+    public String getAppartment() throws RemoteException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     @Override
     public void setAppartment(String discreption, String category, int price, String location, String area, int numberOfRooms) throws RemoteException {
+             System.out.println("HERE");
         
         Apartement a = new Apartement();
         AppartementMapper mapper = new AppartementMapper();
@@ -122,17 +132,6 @@ public class Apartement implements AppartmentFacade {
         a.setLocation(location);
         a.setPrice(price);
         a.setNumberOfRooms(numberOfRooms);
-        
         mapper.insert(a);
-        mapper.close();
-        
-        
-    }
-
-    @Override
-    public String getAppartment() throws RemoteException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
+    }  
 }

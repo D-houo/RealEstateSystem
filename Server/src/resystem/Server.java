@@ -18,17 +18,21 @@ import java.rmi.registry.Registry;
 public class Server {
 
     public static void main(String[] args) {
-  
+
+        
        try 
        {
+           
             // My remote object [Skeleton]
-           AppartmentFacade af = new Apartement();
+           AccountInterface af = new Account();
+           AppartmentFacade ap = new Apartement();
             
             // My RMI Registry
-            Registry registry = LocateRegistry.createRegistry(1099);
+            Registry registry = LocateRegistry.createRegistry(2222);
             
             //Add my object to the RMI Registry
-            registry.bind("APfacade", af);
+            registry.bind("AC", af);
+             registry.bind("AP", ap);
             System.out.println("Server is ready...");   
         } 
        catch (Exception ex) 

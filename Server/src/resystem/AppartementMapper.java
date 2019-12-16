@@ -43,22 +43,27 @@ public class AppartementMapper implements Serializable {
     
     public void insert(Apartement a)
     {
-        if(a!=null){
-            if(a.getCategory() == "Renting"){
-                 collection = database.getCollection("RentingApartment"); // Collection name
+     
+        switch(a.getCategory()){
+                case "Sharing":
+                    collection = database.getCollection("SharingApartment"); // Collection name
                 collection.insertOne(Document.parse(gson.toJson(a)));
                 System.out.println("Apartment inserted."); 
-            }
-            else if(a.getCategory() == "Buying"){
-                 collection = database.getCollection("BuyingApartment"); // Collection name
+                    break;
+                case "Renting":
+                      collection = database.getCollection("RentingApartment"); // Collection name
                 collection.insertOne(Document.parse(gson.toJson(a)));
                 System.out.println("Apartment inserted."); 
-            }else if(a.getCategory() == "Sharing"){
-                 collection = database.getCollection("SharingApartment"); // Collection name
+                    break;
+                case "Buying":
+                         collection = database.getCollection("BuyingApartment"); // Collection name
                 collection.insertOne(Document.parse(gson.toJson(a)));
                 System.out.println("Apartment inserted."); 
-            }
+                    break;
+                default:
+                    System.out.println("De7o hena aho");
         }
+        
     }
     
     public void update(Apartement a)

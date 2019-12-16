@@ -5,6 +5,8 @@
  */
 package resystem;
 
+import java.rmi.RemoteException;
+
 /**
  *
  * @author Youssef hamdi
@@ -13,11 +15,12 @@ public class ApatmentToShare extends Apartement {
     
     private int numberOfPersons;
 
-    public ApatmentToShare() {
+    public ApatmentToShare()throws RemoteException {
     }
 
-    public ApatmentToShare(int numberOfPersons, int id, String discreption, String category, int price, String location, String area, int numberOfRooms, Person ownerObj) {
+    public ApatmentToShare(int numberOfPersons, int id, String discreption, String category, int price, String location, String area, int numberOfRooms, Person ownerObj) throws RemoteException {
         super(id, discreption, category, price, location, area, numberOfRooms, ownerObj);
+
         this.numberOfPersons = numberOfPersons;
     }
 
