@@ -21,7 +21,7 @@ public class Main {
             
             AccountInterface af = (AccountInterface) registry.lookup("AC");
             
-                   System.out.println("BEFORE");
+           System.out.println("BEFORE");
            Person p =af.login("ghunemi","de7o");
             System.out.println(p.getAge()+" "+p.getFname());
             System.out.println("AFTER");

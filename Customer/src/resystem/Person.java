@@ -19,14 +19,12 @@ public class Person  implements Serializable{
     String Email;
     int age;
     String phone;
-    Account authObj;
     int ID;
 
     public Person(){
     }
 
-    public Person(Account authObj, String fname, String lname, String Email, int age, String phone, int ID) {
-        this.authObj = authObj;
+    public Person( String fname, String lname, String Email, int age, String phone, int ID) {
         this.fname = fname;
         this.lname = lname;
         this.Email = Email;
@@ -35,14 +33,7 @@ public class Person  implements Serializable{
         this.ID = ID;
     }
 
-    
-    public Account getAuthObj() {
-        return authObj;
-    }
 
-    public void setAuthObj(Account authObj) {
-        this.authObj = authObj;
-    }
 
     public String getFname() {
         return fname;
