@@ -5,7 +5,16 @@
  */
 package resystem;
 
+import com.google.gson.Gson;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
 import java.io.Serializable;
+import java.rmi.RemoteException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.bson.Document;
 
 
 /**
@@ -14,9 +23,32 @@ import java.io.Serializable;
  */
 public class inquireyMapper implements Serializable{
     
-    public void insert(Inquriey i)
-    {
+         private MongoClientURI url;
+            private MongoClient client;
+            private MongoDatabase database;
+            private MongoCollection<Document> collection;
+            private Gson gson = new Gson();
+
+    public inquireyMapper() {
+        
+         Logger mongoLogger = Logger.getLogger("org.mongodb.driver");
+        mongoLogger.setLevel(Level.SEVERE);
+        url = new MongoClientURI("mongodb+srv://Ghunemi:ghunemiwbas@cluster0-xb4ji.mongodb.net/tes");
+        client = new MongoClient(url);
+        database = client.getDatabase("RealState");
+    }
     
+    
+    
+    public void insert(Inquriey i) throws RemoteException
+    {
+                collection = database.getCollection("Inquriey"); 
+    
+                System.out.println("in inserted."); 
+                
+                 Document doc = new Document("Inquiry", i.getComplaint());
+
+                 collection.insertOne(doc);
     }
     
     public void update(Inquriey i)

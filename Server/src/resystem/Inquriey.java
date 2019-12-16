@@ -5,6 +5,7 @@
  */
 package resystem;
 
+import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
@@ -12,10 +13,10 @@ import java.rmi.server.UnicastRemoteObject;
  *
  * @author Abd El Rahman
  */
-public class Inquriey extends UnicastRemoteObject implements InqurieyROI{
+public class Inquriey extends UnicastRemoteObject implements InqurieyROI, Serializable{
     
-    String complaint;
-    int ID;
+    private String complaint;
+    private int ID;
 
     public Inquriey() throws RemoteException{
     }
@@ -40,6 +41,10 @@ public class Inquriey extends UnicastRemoteObject implements InqurieyROI{
 
     @Override
     public void setComplaint(String c)  throws RemoteException{
+        Inquriey i = new Inquriey();
+        inquireyMapper mapper = new inquireyMapper();
+        i.setComplaint(c);
+        mapper.insert(i);
       
     }
 

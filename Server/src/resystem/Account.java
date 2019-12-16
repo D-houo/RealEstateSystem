@@ -14,8 +14,8 @@ import java.rmi.server.UnicastRemoteObject;
  * @author Mohamed Nazeem
  */
 public class Account extends UnicastRemoteObject implements AccountInterface, Serializable{
-    String userName;
-    String password;
+    private String userName;
+    private String password;
 
     public Account() throws RemoteException {
     }

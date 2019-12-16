@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 public class Customer extends Person{
     
-    ArrayList<Apartement> AquiredApartements;
+    private ArrayList<Apartement> AquiredApartements;
 
     public Customer() {
     }

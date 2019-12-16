@@ -43,7 +43,7 @@ public class Visa implements Payment{
 
     @Override
     public void pay() {
-        
+        System.out.println("Payed with visa");
     }
     
 }

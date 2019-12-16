@@ -14,13 +14,13 @@ import java.rmi.server.UnicastRemoteObject;
  * @author Mohamed Nazeem
  */
 public class Person  implements Serializable{
-    String fname;
-    String lname;
-    String Email;
-    int age;
-    String phone;
-    Account authObj;
-    int ID;
+    private String fname;
+    private String lname;
+    private String Email;
+    private int age;
+    private String phone;
+    private Account authObj;
+    private int ID;
 
     public Person(){
     }

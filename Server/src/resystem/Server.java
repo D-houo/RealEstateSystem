@@ -21,11 +21,13 @@ public class Server {
        {
            AccountInterface af = new Account();
            AppartmentFacade ap = new Apartement();
+           InqurieyROI in = new Inquriey();
            
            Registry registry = LocateRegistry.createRegistry(2222);
             
             registry.bind("accountInterface", af);
              registry.bind("aptFacade", ap);
+             registry.bind("inROI", in);
             System.out.println("Server is ready...");   
         } 
        catch (Exception ex) 

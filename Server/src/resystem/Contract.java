@@ -32,7 +32,7 @@ class Contract extends UnicastRemoteObject{
     
     public void setPaymentMethod(Payment Obj) throws RemoteException
     {
-        
+         paymentObj = Obj;
     }
     
     public void setID(int ID) throws RemoteException
@@ -70,9 +70,10 @@ class Contract extends UnicastRemoteObject{
     }
 
     
-    public void checkout()
+    public void checkout() throws RemoteException
     {
-    
+        paymentObj.pay();
     }
+    
     
 }
