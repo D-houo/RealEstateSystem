@@ -22,7 +22,7 @@ public class Main {
          
               Registry registry = LocateRegistry.getRegistry(2222);
           
-            AccountInterface af = (AccountInterface) registry.lookup("AC");
+            AccountInterface af = (AccountInterface) registry.lookup("accountInterface");
             /* Scanner input = new Scanner(System.in);
 
            
@@ -50,10 +50,12 @@ public class Main {
             
             af.register(fname, lname, Email, age, phone, username, password);
             */
-           System.out.println("BEFORE");
-           Person p =af.login("ghunemi","de7o");
-            System.out.println(p.getAge()+" "+p.getFname());
-            System.out.println("AFTER");
+
+           String p =(String) af.login("ghunemi","de7o");
+            System.out.println(p);
+           String[] tempArr = p.split("-");
+           Person person = new Person(tempArr[0],tempArr[1],tempArr[2],Integer.parseInt(tempArr[3]) ,tempArr[6],0);
+            System.out.println();
             
             // Search for the stub "calc"
             //CalculatorInterface c = (CalculatorInterface) registry.lookup("calc");

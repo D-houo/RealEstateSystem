@@ -6,12 +6,14 @@
 package resystem;
 
 import java.io.Serializable;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
 /**
  *
  * @author Mohamed Nazeem
  */
-public class Person implements Serializable{
+public class Person  implements Serializable{
     String fname;
     String lname;
     String Email;
@@ -19,10 +21,10 @@ public class Person implements Serializable{
     String phone;
     int ID;
 
-    public Person() {
+    public Person(){
     }
 
-    public Person(String fname, String lname, String Email, int age, String phone, int ID) {
+    public Person( String fname, String lname, String Email, int age, String phone, int ID) {
         this.fname = fname;
         this.lname = lname;
         this.Email = Email;
@@ -30,6 +32,8 @@ public class Person implements Serializable{
         this.phone = phone;
         this.ID = ID;
     }
+
+
 
     public String getFname() {
         return fname;
