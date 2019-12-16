@@ -13,6 +13,6 @@ import java.rmi.RemoteException;
  * @author Mohamed Nazeem
  */
 public interface AccountInterface extends Remote{
-    public void register(Person perobj) throws RemoteException;
+    public void register(String fname, String lname, String Email, int age, String phone, String username, String password) throws RemoteException;
     public Person login(String username , String password) throws RemoteException;
 }

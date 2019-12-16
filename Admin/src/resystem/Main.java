@@ -7,6 +7,7 @@ package resystem;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.util.Scanner;
 
 /**
  *
@@ -18,8 +19,42 @@ public class Main {
         try 
         {
             // Connecting to the RMI Registry created on the server
-            Registry registry = LocateRegistry.getRegistry(1099);
+         
+              Registry registry = LocateRegistry.getRegistry(2222);
+          
+            AccountInterface af = (AccountInterface) registry.lookup("AC");
+            /* Scanner input = new Scanner(System.in);
 
+           
+            
+            System.out.print("Enter your first name: ");
+           String fname = input.nextLine();
+          
+            System.out.print("Enter your Last name: ");
+            String lname = input.nextLine();
+  
+            System.out.print("Enter your Username: ");
+            String username = input.nextLine();
+            
+            System.out.print("Enter your Password: ");
+            String password = input.nextLine();
+            
+            System.out.print("Enter your Email: ");
+            String Email = input.nextLine();
+            
+            System.out.print("Enter your Phone number: ");
+            String phone = input.nextLine();
+            
+            System.out.print("Enter your age: ");
+            int age = input.nextInt();
+            
+            af.register(fname, lname, Email, age, phone, username, password);
+            */
+           System.out.println("BEFORE");
+           Person p =af.login("ghunemi","de7o");
+            System.out.println(p.getAge()+" "+p.getFname());
+            System.out.println("AFTER");
+            
             // Search for the stub "calc"
             //CalculatorInterface c = (CalculatorInterface) registry.lookup("calc");
 
@@ -31,7 +66,7 @@ public class Main {
         } 
         catch (Exception ex) 
         {
-            System.out.println("Exception occured");
+            System.out.println("Exception occured"+ex);
         }
     }
 }

@@ -5,11 +5,13 @@
  */
 package resystem;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Mohamed Nazeem
  */
-public class Person {
+public class Person implements Serializable{
     String fname;
     String lname;
     String Email;
