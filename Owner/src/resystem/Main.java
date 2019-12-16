@@ -23,7 +23,7 @@ public class Main {
             // Connecting to the RMI Registry created on the server
            Registry registry = LocateRegistry.getRegistry(2222);
           
-            AppartmentFacade af = (AppartmentFacade) registry.lookup("AP");
+            AppartmentFacade af = (AppartmentFacade) registry.lookup("aptFacade");
          
             System.out.print("Enter Apartment discreption: ");
             Scanner input = new Scanner(System.in);
