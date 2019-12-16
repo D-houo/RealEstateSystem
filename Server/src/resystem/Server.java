@@ -5,9 +5,6 @@
  */
 package resystem;
 
-import com.mongodb.MongoClient;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
@@ -22,17 +19,13 @@ public class Server {
         
        try 
        {
-           
-            // My remote object [Skeleton]
            AccountInterface af = new Account();
            AppartmentFacade ap = new Apartement();
+           
+           Registry registry = LocateRegistry.createRegistry(2222);
             
-            // My RMI Registry
-            Registry registry = LocateRegistry.createRegistry(2222);
-            
-            //Add my object to the RMI Registry
-            registry.bind("AC", af);
-             registry.bind("AP", ap);
+            registry.bind("accountInterface", af);
+             registry.bind("aptFacade", ap);
             System.out.println("Server is ready...");   
         } 
        catch (Exception ex) 

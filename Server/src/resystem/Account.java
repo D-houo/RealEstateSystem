@@ -42,16 +42,7 @@ public class Account extends UnicastRemoteObject implements AccountInterface, Se
         this.password = password;
     }
     
-    @Override
-    public Person login(String username , String password)throws RemoteException{
-      
-        PersonMapper mapper = new PersonMapper();
- 
-     
-        return mapper.getPerson(username, password);
-        
-    }
-
+   
     @Override
     public void register(String fname, String lname, String Email, int age, String phone, String username, String password) throws RemoteException {
         Person a = new Person();
@@ -69,5 +60,10 @@ public class Account extends UnicastRemoteObject implements AccountInterface, Se
         mapper.insert(a);    
     }
 
-
+    @Override
+    public String login(String username, String password) throws RemoteException {
+        PersonMapper mapper = new PersonMapper();
+        String temp = mapper.getPerson(username, password); 
+        return temp;
+    }
 }

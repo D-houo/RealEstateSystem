@@ -14,5 +14,5 @@ import java.rmi.RemoteException;
  */
 public interface AccountInterface extends Remote{
     public void register(String fname, String lname, String Email, int age, String phone, String username, String password) throws RemoteException;
-    public Person login(String username , String password) throws RemoteException;
+    public String login(String username , String password) throws RemoteException;
 }

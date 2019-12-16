@@ -72,16 +72,8 @@ public class PersonMapper implements Serializable{
     public void filter(int id){
     
     }
-    /*
-    System.out.println("Mapper");
-        MongoCollection<Document> col;
-        col  = database.getCollection("Owners");
-        col.find( "{authObj.username : username}");
-        col.fin
-        System.out.println("Helooooo");
-    */
-    
-    public Person getPerson(String username,String password) throws RemoteException{
+
+    public String getPerson(String username,String password) throws RemoteException{
         
         collection = database.getCollection("Owners"); // Collection name
  
@@ -94,11 +86,8 @@ public class PersonMapper implements Serializable{
         String pass = doc.getString("password");
         String Phone = doc.getString("phone");
 
-        Account temp = new Account(user,pass);
+        String temp = fname+"-"+lname+"-"+Email+"-"+Age+"-"+user+"-"+pass+"-"+Phone;
         
-        Person result = new Person(temp,fname,lname,Email,Age,Phone,0);
-        
-        System.out.println(result.getAge()+" " + result.getFname());
-        return result;
+        return temp;
     }
 }
