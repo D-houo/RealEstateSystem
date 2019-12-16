@@ -5,28 +5,43 @@
  */
 package resystem;
 
+import java.io.Serializable;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
 /**
  *
  * @author Mohamed Nazeem
  */
-public class Person {
+public class Person  implements Serializable{
     String fname;
     String lname;
     String Email;
     int age;
     String phone;
+    Account authObj;
     int ID;
 
-    public Person() {
+    public Person(){
     }
 
-    public Person(String fname, String lname, String Email, int age, String phone, int ID) {
+    public Person(Account authObj, String fname, String lname, String Email, int age, String phone, int ID) {
+        this.authObj = authObj;
         this.fname = fname;
         this.lname = lname;
         this.Email = Email;
         this.age = age;
         this.phone = phone;
         this.ID = ID;
+    }
+
+    
+    public Account getAuthObj() {
+        return authObj;
+    }
+
+    public void setAuthObj(Account authObj) {
+        this.authObj = authObj;
     }
 
     public String getFname() {

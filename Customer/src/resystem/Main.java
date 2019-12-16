@@ -17,21 +17,19 @@ public class Main {
         
         try 
         {
-            // Connecting to the RMI Registry created on the server
-            Registry registry = LocateRegistry.getRegistry(1099);
+            Registry registry = LocateRegistry.getRegistry(2222);
+            
+            AccountInterface af = (AccountInterface) registry.lookup("AC");
+            
+                   System.out.println("BEFORE");
+           Person p =af.login("ghunemi","de7o");
+            System.out.println(p.getAge()+" "+p.getFname());
+            System.out.println("AFTER");
 
-            // Search for the stub "calc"
-            //CalculatorInterface c = (CalculatorInterface) registry.lookup("calc");
-
-            // Invoke the remote methods on the remote object
-           // System.out.println("The last result was " + c.getLastResult());
-            //System.out.println("The new result is " + c.add(5, 3));
-            //Result r = c.sub(10, 5);
-           // System.out.println("Sub = " + r.getResult());
         } 
         catch (Exception ex) 
         {
-            System.out.println("Exception occured");
+            System.out.println("Exception occured"+ex);
         }
     
     }
